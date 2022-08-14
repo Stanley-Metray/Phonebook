@@ -13,7 +13,8 @@
 
 body
 {
-    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    background: linear-gradient(90deg, #FC466B 0%, #a55eea 100%);;
+    width: 100%;
 }
 .container
 {
@@ -26,6 +27,20 @@ body
     justify-content: center;
 }
 
+#btn-home
+{
+    display: block;
+    text-decoration: none;
+    position: relative;
+    top: 10px;
+    left: 15px;
+    padding: 5px 10px;
+    background: white;
+    color: black;
+    width: fit-content;
+    border: 1px solid white;
+    border-radius: 5px;
+}
 
 main
 {
@@ -193,10 +208,31 @@ button[type="reset"]
     word-break: break-all;
    }
    
+   main
+   {
+    width: 100% !important;
+   }
+
+   #myForm input[type="text"],input[type="email"], input[type="password"]
+   {
+    width: 100%;
+   }
+
+   #message
+   {
+    width: 100% !important;
+   }
+
    .profilePicture
    {
         width: 100px;
         height: 100px;
+   }
+
+   #l1
+   {
+    margin-left: 10px !important;
+    width: fit-content;
    }
 
     #signOut
@@ -211,8 +247,8 @@ button[type="reset"]
 {
     display: block;
     text-align: center;
-    width: 300px !important;
-    padding: 5px 20px;
+    width: 100% !important;
+    padding: 5px 0px;
     margin-bottom: 10px !important;
     color: crimson !important;
 }
@@ -230,4 +266,17 @@ button[type="reset"]
 {
     color: aqua;
     text-decoration: none;
+}
+
+@media  only screen and (max-width:325px) {
+    .btns
+    {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btns button
+    {
+        width: 100%;
+    }
 }
