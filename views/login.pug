@@ -1,0 +1,41 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='icon', href='favicon.ico?v=1.1')
+    title Phonebook | Login
+    script(src='https://kit.fontawesome.com/ac5bf9eb63.js', crossorigin='anonymous')
+    // Font Awsome Version 5.15.4
+    link(rel='stylesheet', href='style.css')
+    link(rel='stylesheet', href='sign-up.css')
+  body
+    nav
+        span#logo Phonebook
+        #menu
+          ul#navLinks
+            li
+              a(href='/create-contact') Create Contacts
+            li
+              a(href='/view-all-contacts') View Contacts
+            li
+              a(href='/sign-up' id="signUp") Sign Up
+          span#toggle
+            i.fas.fa-bars
+    .container
+      main
+        form#myForm(action='/login-user', method='post' onsubmit="return validate()")
+          span Login
+          input(autocomplete='off', type='email', placeholder='Email', name='email')
+          input(autocomplete='off', type='password', placeholder='Password', name='password')
+          label#l1(for='forgetPassword')
+            a(href='#') Forget Password?
+          label(id='message' style="display:block;") #{message}
+          .btns
+            button(type='submit') Login
+          label#l2(for='notHaveAccount')
+            | Not have an account? 
+            a(href='/sign-up') SignUp here
+    script(src='sign-up.js')
+    script(src='script.js')

@@ -1,0 +1,163 @@
+form
+{
+    width: 100%;
+}
+
+.icon
+{
+    display: block;
+    margin-left: 20px !important;
+}
+
+.icon i
+{
+    font-size: 20px;
+    color: #182C61;
+}
+
+.field
+{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.innerField
+{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.innerField input,label
+{
+    height: 40px;
+    margin: 20px;
+    margin-left: 35px !important;
+}
+
+.innerField label
+{
+    font-size: larger;
+    color: #000;
+}
+
+.innerField input
+{
+    width: 300px !important;
+    font-size: larger;
+    color: #252525;
+    padding-left: 10px;
+    outline: 2px solid transparent;
+    border: 1px solid #57606f;
+    border-radius: 5px;
+}
+
+
+.innerField input:focus
+{
+    border: 2px solid #CAD3C8;
+    outline: 3px solid #a4b0be;
+}
+
+#btn-submit
+{
+    background: #55efc4;
+    /* color: #c8d6e5; */
+    padding: 7px 15px;
+    border: 1px solid #00b894;
+    border-radius: 50px;
+    font-size: large;
+    font-weight: bold;
+    margin: 20px 20px;
+}
+
+#btn-submit:hover
+{
+    background: #1dd1a1;
+}
+
+@media only screen and (max-width:540px){
+    .innerField
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .field
+    {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .innerField input,label
+    {
+
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .icon
+    {
+        margin: 0 !important;
+    }
+
+    .icon i
+    {
+       margin: 0 !important;
+    }
+
+    #title
+    {
+        margin: 0px !important;
+        padding: 20px 10px;
+    }
+}
+
+/* for making all fields responsive according to screen width*/
+
+@media only screen and (max-width:1050px){
+    .field
+    {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width:870px){
+    .field
+    {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width:750px){
+    .field
+    {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width:550px){
+    form
+    {
+        padding: 0px 15px;
+    }
+    
+    #btn-submit
+    {
+        margin: 20px 0px;
+        width: 100%;
+    }
+
+    .field
+    {
+        width: 100%;
+    }   
+}
+

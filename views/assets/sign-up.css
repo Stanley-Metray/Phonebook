@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Roboto&display=swap');
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+body
+{
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+}
+.container
+{
+    min-height: 700px;
+    width: 100% !important;
+    height: 100vh !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+main
+{
+    width: fit-content;
+    margin: auto;
+    background: rgba(3, 3, 3, 0.6);
+}
+
+#myForm
+{
+    padding: 50px;
+}
+
+#myForm span
+{
+    color: white;
+    font-size: 25px;
+    position: relative;
+    left: -30px;
+}
+
+
+#myForm input::placeholder
+{
+    color: #ebebeb9d
+}
+
+#myForm input[type="text"],input[type="email"], input[type="password"]
+{
+    display: block;
+    padding: 10px 10px;
+    margin: 25px 0;
+    height: 30px;
+    border: none;
+    width: 350px;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    color: rgba(255, 255, 255,1.0);
+    border-bottom: 1px solid #ffff;
+}
+
+#myForm input[type="radio"]
+{
+    margin: 10px 0px;
+}
+
+#myForm label
+{
+    margin: 0px 8px;
+    color: rgba(255, 255, 255,1.0);
+}
+
+.btns
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+button
+{
+    width: 100px;
+    padding: 5px;
+    font-size: 14px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+button[type="submit"]
+{
+    background: #1DD1A1;
+    border: 1px solid #10AC84;
+}
+
+button[type="reset"]
+{
+    background: #FF6B6B;
+    border: 1px solid #EE5253;
+}
+
+#l1
+{
+    display: block !important;
+    margin-left: 220px !important;
+    margin-top: 10px !important;
+    margin-bottom: 15px !important;
+}
+
+#l1 a
+{
+    color: white;
+    text-decoration: none;
+}
+
+#l2
+{
+    display: block !important;
+    margin: 20px 0px !important;
+}
+
+#l2 a
+{
+    color: aqua;
+    text-decoration: none;
+}
+
+.profilePicture
+{
+    height: 200px;
+    width: 200px;
+    background-position: center !important;
+    background-size: 80% 100% !important;
+    border-radius: 50%;
+    background: url("/public/bgs/ei_1650892991948-removebg-preview.png");
+}
+
+.info
+{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.left
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#signOut
+{
+    height: 30px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: aqua;
+    color: white;
+    border: none;
+    position: relative;
+    top: 60px;
+    left: 200px;
+}
+
+#signOut:hover
+{
+    background-color: rgb(8, 221, 210);
+}
+
+@media only screen and (max-width:525px){
+   *
+   {
+    font-size: small;
+    word-break: break-all;
+   }
+   
+   .profilePicture
+   {
+        width: 100px;
+        height: 100px;
+   }
+
+    #signOut
+    {
+        position: static;
+        width: 80%;
+        margin: 30px 0px;
+    }
+}
+
+#message
+{
+    display: block;
+    text-align: center;
+    width: 300px !important;
+    padding: 5px 20px;
+    margin-bottom: 10px !important;
+    color: crimson !important;
+}
+
+#loginHere
+{
+    color: white;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+#loginHere a
+{
+    color: aqua;
+    text-decoration: none;
+}

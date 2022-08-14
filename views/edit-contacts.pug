@@ -1,0 +1,120 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='icon', href='favicon.ico?v=1.1')
+    title Phonebook | Edit Contact
+    script(src='https://kit.fontawesome.com/ac5bf9eb63.js', crossorigin='anonymous')
+    // Font Awsome Version 5.15.4
+    link(rel='icon', href='favicon.ico?v=1.1')
+    link(rel='stylesheet', href='style.css')
+    link(rel='stylesheet', href='createnew.css')
+  body
+    .container
+      // Top Menu Start
+      nav
+        span#logo Phonebook
+        #menu
+          ul#navLinks
+            li
+              a(href='/create-contact') Create Contacts
+            li
+              a(href='/view-all-contacts') View Contacts
+            li
+              a(href='/sign-up' id="signUp") Sign Up
+          span#toggle
+            i.fas.fa-bars
+      // Top Menu End
+      // Main Content Start
+      main
+        span#title Edit Contact
+        form(name='formCreateContact', action='/update-contact', method='post' onsubmit="return validate()")
+          .field
+            span.icon
+              i.fas.fa-user
+            .innerField
+              label(for='#') First name
+              input(autocomplete='off', type='text', name='firstName' value=contact.firstName)
+          .field
+            .innerField
+              label(for='#') Last name
+              input(autocomplete='off', type='text', name='lastName' value=contact.lastName)
+          .field
+            .innerField
+              label(for='#') Email
+              input(autocomplete='off', type='email', name='email' value=contact.email)
+          .field
+            span.icon
+              i.fas.fa-building
+            .innerField
+              label(for='#') Company
+              input(autocomplete='off', type='text', name='company' value=contact.company)
+          .field
+            .innerField
+              label(for='#') Department
+              input(autocomplete='off', type='text', name='department' value=contact.department)
+          .field
+            .innerField
+              label(for='#') Title
+              input(autocomplete='off', type='text', name='title' value=contact.title)
+          .field
+            span.icon
+              i.fas.fa-phone
+            .innerField
+              label(for='#') Phone
+              input(autocomplete='off', type='text', name='phone' value=contact.phone)
+          .field
+            .innerField
+              label(for='#') Mobile
+              input(autocomplete='off', type='text', name='mobile' value=contact.mobile)
+          .field
+            span.icon
+              i.fas.fa-map-marker-alt
+            .innerField
+              label(for='#') Address
+              input(autocomplete='off', type='text', name='address' value=contact.address)
+          .field
+            span.icon
+              i.fas.fa-globe
+            .innerField
+              label(for='#') Website
+              input(autocomplete='off', type='text', name='website' value=contact.website)
+          .field
+            span.icon
+              i.fas.fa-calendar-alt
+            .innerField
+              label(for='#') Birthday
+              input(autocomplete='off', type='date', name='birthday' value=contact.birthday)
+          .field
+            span.icon
+              i.fas.fa-users
+            .innerField
+              label(for='#') Relationship
+              input(list='relation', autocomplete='off', type='text', name='relationship' value=contact.relationship)
+            datalist#relation
+              option(value='Assistant')
+              option(value='Brother')
+              option(value='Child')
+              option(value='Domestic Partner')
+              option(value='Father')
+              option(value='Friend')
+              option(value='Manager')
+              option(value='Mother')
+              option(value='Parent')
+              option(value='Reffered By')
+              option(value='Relative')
+              option(value='Sister')
+              option(value='Spouse')
+              option(value='None')
+  
+          button(type="submit" id="btn-submit") Save
+      // Main Content End
+      // Footer Start
+      footer
+        span Personal Phonebook
+        span Developed by Stanley Metray
+      // Footer End
+      script(src='create-contact.js')
+      script(src='script.js')

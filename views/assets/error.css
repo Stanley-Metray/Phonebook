@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&family=Ubuntu&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* min-height: 00px; */
+    max-height: fit-content;
+}
+
+#errorImg {
+    background-image: url("error.jpg");
+    width: 60%;
+    padding: 50px;
+    background-position: center;
+    background-size: 100% 100%;
+    margin-bottom: 20px;
+}
+
+span {
+    /* color: white; */
+    font-weight: bold;
+}
+
+span[id="status"] {
+    font-size: 50px;
+    color: #d63031;
+}
+
+span[id="errorMessage"] {
+    color: #ff7675;
+}
+
+a {
+    text-decoration: none;
+    margin: 20px 0px;
+    padding: 10px 15px;
+    background: #55efc4;
+    width: fit-content;
+    border: 1px solid #00b894;
+    border-radius: 5px;
+    color: blue;
+    font-weight: bold;
+}
+
+@media only screen and (max-width:500px) {
+    #errorImg {
+        width: 100%;
+    }
+}

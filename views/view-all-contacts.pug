@@ -1,0 +1,62 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='icon', href='favicon.ico' type="image/x-icon")
+    title Phonebook | View All Contacts
+    script(src='https://kit.fontawesome.com/ac5bf9eb63.js', crossorigin='anonymous')
+    // Font Awsome Version 5.15.4
+    link(rel='stylesheet', href='viewallcontacts.css')
+    link(rel='stylesheet', href='style.css')
+  body
+    // Top Menu Start
+    nav
+      span#logo Phonebook
+      #menu
+        ul#navLinks
+          li
+            a(href='/create-contact') Create Contacts
+          li
+            a(href='/view-all-contacts') View Contacts
+          li
+            a(href='/sign-up' id="signUp") Sign Up
+        span#toggle
+          i.fas.fa-bars
+    // Top Menu End
+    // Main Content Start Here
+    main
+      span#title All Contacts
+      table.contacts
+        tbody
+          tr.column-name
+            th
+            th Name
+            th.number Number
+            th.email Email
+            th
+          
+        each value, keys in contacts 
+          tr.contact
+            td
+              .img
+            td.name=value.firstName+" "+value.lastName
+            td.number=value.mobile
+            td.email=value.email
+            td
+              i.edit.fas.fa-edit
+              i.delete.fas.fa-trash
+      aside#sideBar
+        input#search(autocomplete='off', placeholder='Search Contact', type='search', name='search')
+
+        ul#names
+    // Main Content Start Here
+    // Footer Start
+    footer
+      span Personal Phonebook
+      span Developed by Stanley Metray
+    // Footer End
+    script(src='https://code.jquery.com/jquery-3.6.0.min.js', integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=', crossorigin='anonymous')
+    script(src='script.js')
+    script(src="view-all-contacts.js")
